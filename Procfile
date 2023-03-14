@@ -1,0 +1,1 @@
+web: gunicorn kboa-foods.wsgi
