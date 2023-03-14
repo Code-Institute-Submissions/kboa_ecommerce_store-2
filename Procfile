@@ -1,1 +1,1 @@
-web: gunicorn kboa-foods.wsgi
+web: gunicorn kboa_foods.wsgi
