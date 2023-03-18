@@ -48,7 +48,7 @@
               <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                 <li class="list-inline-item dropdown"> 
                   <div class="d-flex float-end">
-                    <a href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="me-1 border rounded py-1 px-3 nav-link d-flex align-items-center" target="_blank"> <i class="fas fa-user-alt m-1 me-md-2"></i><p class="d-none d-md-block mb-0">My Account</p></a>
+                    <a href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="me-1 border rounded py-1 px-3 nav-link d-flex align-items-center" target="_blank"> <i class="fas fa-user-alt fa-lg m-1 me-md-2"></i><p class="d-none d-md-block mb-0">My Account</p></a>
                     <div class="dropdown-menu border-0" aria-labelledby="user-options">
                       {% if request.user.is_authenticated %}
                           {% if request.user.is_superuser %}
@@ -64,9 +64,17 @@
                   </div>
                 </li>
                 <li class="list-inline-item">
-                  <div class="d-flex float-end">
-                    <a href="#" class="me-1 border rounded py-1 px-3 nav-link d-flex align-items-center" target="_blank"> <i class="fas fa-shopping-bag fa-lg m-1 me-md-2"></i><p class="d-none d-md-block mb-0">My Cart</p></a>
-                  </div>
+                  <a href="#" class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} me-1 border rounded py-1 px-3 nav-link d-flex align-items-center" target="_blank"> <i class="fas fa-shopping-bag fa-lg m-1 me-md-2"></i><p class="d-none d-md-block mb-0">My Cart</p>
+                    <div class="d-flex float-end">
+                      <p class="my-0">
+                        {% if grand_total %}
+                            ${{ grand_total|floatformat:2 }}
+                        {% else %}
+                            $0.00
+                        {% endif %}
+                    </p>
+                    </div>
+                  </a>
                 </li>
               </ul>
             </div>
