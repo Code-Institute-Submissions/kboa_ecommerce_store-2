@@ -33,7 +33,63 @@
     <title>KBOA Foods {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
-    <header class="container-fluid fixed-top"></header>
+    <header class="container-fluid fixed-top">
+      <div class="p-3 text-center bg-white border-bottom">
+        <div class="container">
+          <div class="row gy-3">
+            <!-- Left Elements -->
+            <div class="col-lg-2 col-sm-4 col-4">
+              <a href="#" target="_blank" class="float-start"></a>
+              <h2 class="logo-font text-black my-0"><strong>KBOA</strong> Foods</h2>
+            </div>
+  
+            <!-- Center Elements -->
+            <div class="order-lg-last col-lg-5 col-sm-8 col-8">
+              <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                <li class="list-inline-item dropdown"> 
+                  <div class="d-flex float-end">
+                    <a href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="me-1 border rounded py-1 px-3 nav-link d-flex align-items-center" target="_blank"> <i class="fas fa-user-alt m-1 me-md-2"></i><p class="d-none d-md-block mb-0">My Account</p></a>
+                    <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                      {% if request.user.is_authenticated %}
+                          {% if request.user.is_superuser %}
+                              <a href="#" class="dropdown-item">Product Management</a>
+                          {% endif %}
+                          <a href="#" class="dropdown-item">My Profile</a>
+                          <a href="#" class="dropdown-item">Logout</a>
+                      {% else %}
+                          <a href="#" class="dropdown-item">Register</a>
+                          <a href="#" class="dropdown-item">Login</a>
+                      {% endif %}
+                  </div>
+                  </div>
+                </li>
+                <li class="list-inline-item">
+                  <div class="d-flex float-end">
+                    <a href="#" class="me-1 border rounded py-1 px-3 nav-link d-flex align-items-center" target="_blank"> <i class="fas fa-shopping-bag fa-lg m-1 me-md-2"></i><p class="d-none d-md-block mb-0">My Cart</p></a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+  
+            <!-- Right Elements -->
+            <div class="col-lg-5 col-md-12 col-12">
+              <form method="GET" action="#">
+                <div class="input-group float-center">
+                  <div class="form-outline">
+                    <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site" />
+                  </div>
+                  <button type="submit" class="btn btn-black shadow-0">
+                    <span class="icon">
+                      <i class="fas fa-search"></i>
+                    </span>
+                  </button>
+                </div>
+              </form> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
 
     {% if messages %}
     <div class="message-container"></div>
