@@ -3,8 +3,11 @@ html {
 }
 
 body {
+    background: url('/media/homepage2.jpeg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
+    color: #555;
+    font-family: 'Lato';
 }
 
 /* from Bulma */
@@ -24,12 +27,35 @@ body {
     width: fit-content;
 }
 
+.buy-now-button {
+    color: white;
+    min-width: 260px;
+}
+
 .btn-black {
     background: black;
     color: white;
 }
 
-.icon-hover:hover {
+.buy-now-button:hover,
+.buy-now-button:active,
+.buy-now-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #222;
+    color: white;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+/* .icon-hover:hover {
     border-color: #3b71ca !important;
     background-color: white !important;
     font-family: 'Lato';
@@ -38,7 +64,7 @@ body {
   
   .icon-hover:hover i {
     color: #3b71ca !important;
-  }
+  } */
 
   /* -------------------------------- Media Queries */
 

@@ -61,7 +61,7 @@
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
           <ul class="list-inline list-unstyled text-center text-lg-right my-0">
             <li class="list-inline-item dropdown">            
-              <a href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="text-black" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="text-center">
                   <div><i class="fas fa-user-alt fa-lg m-1 me-md-2"></i></div>
                   <p class="d-none d-md-block mb-0">My Account</p>
@@ -81,7 +81,7 @@
               </div>             
             </li>
             <li class="list-inline-item">
-              <a href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="text-black" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="text-center">
                   <div><i class="fas fa-heart fa-lg m-1 me-md-2"></i></div>
                   <p class="d-none d-md-block mb-0">Wishlist</p>
@@ -107,25 +107,17 @@
       </div>
     </div>
   </div>
-
-      <nav class="navbar navbar-expand-lg navbar-dark bg-success w-100">
-        <!-- Container wrapper -->
-        <div class="container justify-content-center justify-content-md-between">
-          <!-- Toggle button -->
-          <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarLeftAlignExample" aria-controls="navbarLeftAlignExample" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-bars"></i>
-          </button>
-          <!-- Collapsible wrapper -->
-          <div class="collapse navbar-collapse" id="navbarLeftAlignExample">
-            <!-- Left links -->
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="#">All Products</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success w-100">
+    <!-- Container wrapper -->
+    <div class="container justify-content-center justify-content-md-between">
+      <!-- Toggle button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      {% include 'includes/mobile_top_header.html' %}
+      {% include 'includes/main_nav.html' %}
+    </div>
+  </nav>
     </header>
 
     {% if messages %}
