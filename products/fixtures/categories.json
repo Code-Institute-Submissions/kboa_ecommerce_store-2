@@ -1,0 +1,6 @@
+[{"pk": 1, "model": "products.category", "fields": {"name": "boneless_chicken", "friendly_name": "Boneless Chicken"}}, {"pk": 2, "model": "products.category",
+"fields": {"name": "chicken_wings", "friendly_name": "Chicken Wings"}}, {"pk": 3, "model": "products.category", "fields": {"name": "crabs", "friendly_name": "Crabs"}},
+{"pk": 4, "model": "products.category", "fields": {"name": "minced_meat", "friendly_name": "Minced Meat"}}, {"pk": 5, "model": "products.category", "fields": {"name":
+"pomo", "friendly_name": "Pomo"}}, {"pk": 6, "model": "products.category", "fields": {"name": "prawns", "friendly_name": "Prawns"}}, {"pk": 7,
+"model": "products.category", "fields": {"name": "shrimps", "friendly_name": "Shrimps"}}, {"pk": 8, "model": "products.category", "fields":
+{"name": "smoked_chicken", "friendly_name": "Smoked Chicken"}}, {"pk": 9, "model": "products.category", "fields": {"name": "titus", "friendly_name": "Titus"}}]
