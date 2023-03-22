@@ -13,14 +13,15 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="poultry-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="chicken-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Chicken
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="#" class="dropdown-item">Chicken wings</a>
-                <a href="#" class="dropdown-item">Boneless chicken</a>
-                <a href="#" class="dropdown-item">Smoked Chicken</a>
-                <a href="#" class="dropdown-item">All Chicken</a>
+            <div class="dropdown-menu border-0" aria-labelledby="chicken-link">
+                <a href="{% url 'products' %}?category=chicken_wings" class="dropdown-item">Chicken Wings</a>
+                <a href="{% url 'products' %}?category=chicken_drumsticks" class="dropdown-item">Chicken Drumsticks</a>
+                <a href="{% url 'products' %}?category=boneless_chicken" class="dropdown-item">Boneless chicken</a>
+                <a href="{% url 'products' %}?category=smoked_chicken" class="dropdown-item">Smoked Chicken</a>
+                <a href="{% url 'products' %}?category=chicken,chicken_wings,chicken_drumsticks,boneless_chicken,smoked_chicken" class="dropdown-item">All Chicken</a>
             </div>
         </li>
 
@@ -28,22 +29,24 @@
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="beef-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Beef Products
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-                <a href="#" class="dropdown-item">Minced meat</a>
-                <a href="#" class="dropdown-item">Pomo</a>
-                <a href="#" class="dropdown-item">All Beef</a>
+            <div class="dropdown-menu border-0" aria-labelledby="beef-link">
+                <a href="{% url 'products' %}?category=stewing_beef" class="dropdown-item">Stewing Beef</a>
+                <a href="{% url 'products' %}?category=shaki" class="dropdown-item">Shaki</a>
+                <a href="{% url 'products' %}?category=minced_meat" class="dropdown-item">Minced Meat</a>
+                <a href="{% url 'products' %}?category=pomo" class="dropdown-item">Pomo</a>
+                <a href="{% url 'products' %}?category=stewing_beef,shaki,minced_meat,meat,pomo" class="dropdown-item">All Beef</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="sea-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="seafood-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Sea Food
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="#" class="dropdown-item">Crabs</a>
-                <a href="#" class="dropdown-item">Prawns</a>
-                <a href="#" class="dropdown-item">Shrimps</a>
-                <a href="#" class="dropdown-item">All Sea Food</a>
+            <div class="dropdown-menu border-0" aria-labelledby="seafood-link">
+                <a href="{% url 'products' %}?category=crabs" class="dropdown-item">Crabs</a>
+                <a href="{% url 'products' %}?category=prawns" class="dropdown-item">Prawns</a>
+                <a href="{% url 'products' %}?category=shrimps" class="dropdown-item">Shrimps</a>
+                <a href="{% url 'products' %}?category=crabs,prawns,shrimps" class="dropdown-item">All Sea Food</a>
             </div>
         </li>
 
@@ -51,11 +54,11 @@
             <a class="logo-font font-weight-bold nav-link text-black" href="#" id="fish-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Fish
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="#" class="dropdown-item">Titus</a>
-                <a href="#" class="dropdown-item">Croaker</a>
-                <a href="#" class="dropdown-item">Tilapia</a>
-                <a href="#" class="dropdown-item">All Fish</a>
+            <div class="dropdown-menu border-0" aria-labelledby="fish-link">
+                <a href="{% url 'products' %}?category=titus_fish" class="dropdown-item">Titus</a>
+                <a href="{% url 'products' %}?category=croaker_fish" class="dropdown-item">Croaker</a>
+                <a href="{% url 'products' %}?category=tilapia_fish" class="dropdown-item">Tilapia</a>
+                <a href="{% url 'products' %}?category=titus_fish,croaker_fish,tilapia_fish,fish" class="dropdown-item">All Fish</a>
             </div>
         </li>
 
@@ -63,7 +66,7 @@
             <a class="logo-font font-weight-bold nav-link text-black" href="#" id="meat-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Meat Share
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="specials-link">
+            <div class="dropdown-menu border-0" aria-labelledby="meat-link">
                 <a href="#" class="dropdown-item">Goat Meat</a>
                 <a href="#" class="dropdown-item">Cow Meat</a>
                 <a href="#" class="dropdown-item">Ram Meat</a>
