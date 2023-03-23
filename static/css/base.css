@@ -70,6 +70,20 @@ a.category-badge > span.badge:hover {
     color: #fff !important;
 }
 
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btt-link, 
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
 /* .icon-hover:hover {
     border-color: #3b71ca !important;
     background-color: white !important;
