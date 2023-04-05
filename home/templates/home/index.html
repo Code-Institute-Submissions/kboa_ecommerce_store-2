@@ -10,19 +10,19 @@
 {% endblock %}
 
 {% block content %}
-<div class="container h-100">
-    <div class="row h-100">
-        <div class="col-7 col-md-6 my-auto">
-            <h1 class="display-4 logo-font text-black">
-                Quality Frozen Products
-            </h1>
-            <div class="my-5">
-                <h4>
-                    <a href="{% url 'products' %}" class="buy-now-button bg-success btn btn-lg rounded-0 text-uppercase py-3">Buy Now</a>
-                </h4>
-            </div>
-        </div>
+<div class="container-fluid h-100 bg-image">
+</div>
+    <!-- <div class="row h-100"> </div> -->
+<div class="col-7 col-md-6 my-auto card mb-3 border-0" id="cover-text">
+    <h2 class="display-4 logo-font text-black">
+        Quality Frozen Products
+    </h2>
+    <div class="my-5">
+        <h4>
+            <a href="{% url 'products' %}" class="buy-now-button bg-success btn btn-lg rounded-0 text-uppercase py-3">Buy Now</a>
+        </h4>
     </div>
 </div>
+    
 
 {% endblock %}
