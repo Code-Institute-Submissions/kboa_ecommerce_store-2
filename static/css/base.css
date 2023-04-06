@@ -55,8 +55,8 @@ body {
     min-width: 260px;
 }
 
-.btn-black {
-    background: black;
+.btn-success {
+    background: green;
     color: white;
 }
 
@@ -64,6 +64,13 @@ body {
     background: white;
     color: black !important; /* use important to override link colors for <a> elements */
     border: 1px solid black;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: black;
+    color: white !important;
 }
 
 .buy-now-button:hover,
@@ -111,6 +118,15 @@ a.category-badge > span.badge:hover {
 .update-link,
 .remove-item {
     cursor: pointer;
+}
+
+/* ------------------------------- bootstrap toasts */
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
 }
 
 .custom-toast {
@@ -170,15 +186,6 @@ a.category-badge > span.badge:hover {
     height: 100px;
     overflow-x: hidden;
     overflow-y: auto;
-}
-
-/* ------------------------------- bootstrap toasts */
-
-.message-container {
-    position: fixed;
-    top: 72px;
-    right: 15px;
-    z-index: 99999999999;
 }
 
 /* .icon-hover:hover {
