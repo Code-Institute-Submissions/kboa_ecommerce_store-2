@@ -1,5 +1,5 @@
-# Mother's Tongue Blog
-KBOA Foods is an ecommerce foodstore in gbagada. The application was built for ease of shopping from anywhere on the website and the items delivered to the client's location.
+# KBOA Foods
+KBOA Foods is an ecommerce foodstore in Gbagada Lagos Nigeria. The web application was built for ease of shopping from anywhere and the items delivered to the client's location.
 The store is a full fledge ecommerce application that has been integrated with AWS and Stripe for payment details to conclude its transaction.
 
 <p> Users with the weblink can shop from the website </p>
@@ -8,7 +8,7 @@ The store is a full fledge ecommerce application that has been integrated with A
 <p> Users are able to complete their order using stripe </p>
 https://kboa-foods.herokuapp.com/
 
-![Image Here](./docs/features/)
+![Image Here](./docs/userstory/amiresponsive.png)
 
 ## Our Main goal:
 <ul>
@@ -27,73 +27,62 @@ https://kboa-foods.herokuapp.com/
 ### Target Audience:
 Our application is targeted at online shoppers who would rather shop from the comfort of their home/environment. 
 
-## User Story
+## User Story:
 <ul>
-<li> Account Registeration
+<li> Navigation
+    <ul>
+    <li> A site shopper can view a list of products from the main navigation
+    <li> A site shopper can quickly find products from the main navigation without having to search through all the products
+    <li> A site user can easily view the total in the cart to avoid spending too much
+    </ul> 
 
-    As a Site User I can register an account so that I can interact with the blog
+![Image Here](./docs/userstory/main_nav.png)
 
-![Image Here](./docs/features/signup.png)
+<li> Registration and Accounts
+    <ul>
+    <li> A site user can easily register for an account.
+    <li> A site user can easily login or logout
+    <li> A site user receive an email confirmation after registration
+    <li> A site user can have a personalized user profile.
+    </ul>
 
-<li> Login
+![Image Here](./docs/userstory/signup.png)
 
-    As a Site User I can sign into an existing account so that I can interact with the blog
+<li> Sort and Search
+    <ul> 
+    <li> Shoppers can easily find a specific product they would like to purchase
+    <li> Shoppers can quickly decide if the product they want is available.
+    </ul>
 
-![Image Here](./docs/features/Login.png)
+![Image Here](./docs/userstory/search_product.png)    
 
-<li> Logout
+<li> Purchase and Checkout
+    <ul>
+    <li> Shoppers can view order confirmation before checkout
+    <li> Shoppers can confidently provide their payment information to make a purchase
+    <li> Shoppers will receive an email confirmation after checkout
+    </ul>
 
-    As a Site User I can signout of an account so that I can stop interacting with the blog
+![Image Here](./docs/userstory/checkout.png)
 
-![Image Here](./docs/features/Logout.png)    
+<li> Shopping Cart
+    <ul> 
+    <li> Shoppers can view items in the shopping cart
+    <li> Shoppers can adjust items in their shopping cart
+    <li> A site shopper can edit/update items from the shopping cart
+    </ul>
 
-<li> Create a post
+![Image Here](./docs/userstory/my_cart.png)
 
-    As a Site User I can create post, so that I can upload blog posts. 
-    
+<li> Wishlist
+    <ul> 
+    <li> This section has the social media icons, so users can find more information about the yoruba club on facebook, instagram, twitter and youtube.
+    <li> The icons when click on takes the user to the respective url.
+    <li> It gives the users ability to find and contact the club if they need to.
+    </ul>
 
-![Image Here](./docs/features/createapost.png)
-
-<li> Retrieve a post
-
-    As a Site User I can retrieve post, so that I can view a list of posts.
-
-![Image Here](./docs/features/retrievepost.png)
-
-<li> Update a post
-
-    As a Site User I can update post, so that I can view the post list.
-
-![Image Here](./docs/features/updatebutton.png)
-
-<li> Delete a post
-    
-    As a Site User I can delete post, so that I can delete unwanted blog post.  
-
-![Image Here](./docs/features/updatebutton.png)
-
-<li> Like a post
-
-    As a Site User I can like a post so that I can interact with the content 
-
-![Image Here](./docs/features/likeapost.png)
-
-<li> Unlike a post
-    
-    As a Site User I can unlike a post so that I can interact with the content 
-
-![Image Here](./docs/features/unlikeapost.png)
-
-<li> Leave a comment
-    As a Site User I can leave comments on a post so that I can be involved in the conversation
-
-![Image Here](./docs/features/leaveacomment.png)
-
-<li> View category post
-
-    As a Site User I can view category post, so that I can see similar posts to read. 
-
-![Image Here](./docs/features/categorylink.png)
+![Image Here](./docs/features/socialnetworks.png)
+</ul>
 
 <li> Social media links
     <ul> 
@@ -102,7 +91,7 @@ Our application is targeted at online shoppers who would rather shop from the co
     <li> It gives the users ability to users to folluw us on all our socia media links.
     </ul>
 
-![Image Here](./docs/features/sociallinks.png)
+![Image Here](./docs/userstory/footer.png)
 </ul>
 
 ## Testing
