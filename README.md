@@ -8,7 +8,7 @@ The store is a full fledge ecommerce application that has been integrated with A
 <p> Users are able to complete their order using stripe </p>
 https://kboa-foods.herokuapp.com/
 
-![Image Here](./docs/userstory/amiresponsive.png)
+![Image Here](./docs/features/amiresponsive.png)
 
 ## Our Main goal:
 <ul>
@@ -91,7 +91,7 @@ Our application is targeted at online shoppers who would rather shop from the co
     <li> It gives the users ability to users to folluw us on all our socia media links.
     </ul>
 
-![Image Here](./docs/userstory/footer.png)
+![Image Here](./docs/features/footer.png)
 </ul>
 
 ## Testing
@@ -109,6 +109,11 @@ The major challenge that I experienced was timing.
 <li> Timing </li>
 <li> I'm unable to create the update post function </li>
 <li> Users are unable to upload images when they create post </li>
+</ul>
+
+## Bugs
+<ul>
+<li> My migrations failed</li>
 </ul>
 
 ## Validation

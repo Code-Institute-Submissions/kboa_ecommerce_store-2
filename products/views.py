@@ -141,9 +141,9 @@ def delete_product(request, product_id):
 
 
 @login_required
-def add_to_wishlist(request, product_id):
-    product = get_object_or_404(Product, pk=product_id)
-    if product.users_wishlist.filter(product_id=request.user.id).exists():
+def add_to_wishlist(request, id):
+    product = get_object_or_404(Product, id=id)
+    if product.users_wishlist.filter(id=request.user.id).exists():
         product.users_wishlist.remove(request.user)
         messages.success(request, product.title + " has been removed from your WishList")
     else:
