@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
+from django.http import HttpResponse, HttpResponseRedirect
 from .models import Product, Category
 from .forms import ProductForm
 
@@ -137,3 +138,15 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+
+@login_required
+def add_to_wishlist(request, product_id):
+    product = get_object_or_404(Product, pk=product_id)
+    if product.users_wishlist.filter(product_id=request.user.id).exists():
+        product.users_wishlist.remove(request.user)
+        messages.success(request, product.title + " has been removed from your WishList")
+    else:
+        product.users_wishlist.add(request.user)
+        messages.success(request, "Added " + product.title + " to your WishList")
+    return HttpResponseRedirect(request.META["HTTP_REFERER"])
