@@ -107,13 +107,15 @@ Our application is targeted at online shoppers who would rather shop from the co
 The major challenge that I experienced was timing.
 <ul>
 <li> Timing </li>
-<li> I'm unable to create the update post function </li>
-<li> Users are unable to upload images when they create post </li>
+<li> The wishlist view works but my functions are yet to work </li>
 </ul>
 
 ## Bugs
 <ul>
-<li> My migrations failed</li>
+<li> My migrations failed, i had to reset my database and remake new migrations</li>
+<li> Authentication error at checkout</li>
+<li> My statis files failed to load on AWS</li>
+
 </ul>
 
 ## Validation
@@ -173,3 +175,15 @@ The site was deployed to GitHub Page. The following steps were taken for deploym
     </li>
     </ul>
 </ul>
+
+## Credit
+<ul>
+<li> Boutique Ado</li>
+<li> Fontawesome </li>
+<li> W3schools for my code referencing https://www.w3schools.com/howto/ </li>
+<li> Adobe Stock for all my images https://stock.adobe.com/ng/Libraries </li>
+</ul>
+
+## Acknowledgment 
+<ul>
+A special thanks to my hubby for his all round support in making sure this project was a success. Thanks for all the cup of Teas.
