@@ -2,7 +2,6 @@ from decimal import Decimal
 from django.conf import settings
 from django.shortcuts import get_object_or_404
 from products.models import Product
-from coupon.models import Coupon
 
 
 def cart_contents(request):
@@ -11,12 +10,6 @@ def cart_contents(request):
     product_count = 0
     discount = 0
     cart = request.session.get('cart', {})
-    coupon_id = request.session.get('coupon_id')
-    discount_code = None
-    coupon = None
-
-    if (coupon_id):
-        coupon = Coupon.objects.get(id=coupon_id)
 
     for item_id, quantity in cart.items():
         product = get_object_or_404(Product, pk=item_id)
@@ -34,13 +27,6 @@ def cart_contents(request):
 
     total_after_discount = grand_total
 
-    if coupon:
-        discount_code = coupon.code
-        discount = (coupon.discount / Decimal('100')) * grand_total
-        if (discount > grand_total):
-            discount = grand_total
-        total_after_discount = grand_total - discount
-    
     context = {
         'cart_items': cart_items,
         'total': total,
@@ -48,7 +34,6 @@ def cart_contents(request):
         'delivery': delivery,
         'grand_total': grand_total,
         'total_after_discount': total_after_discount,
-        'discount_code': discount_code
     }
 
     return context

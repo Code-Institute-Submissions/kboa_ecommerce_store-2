@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
 from django.contrib import messages
-from coupon.forms import CouponApplyForm
 
 from products.models import Product
 
@@ -10,10 +9,7 @@ from products.models import Product
 def view_cart(request):
     """ A view that renders the shopping cart content page """
 
-    coupon_apply_form = CouponApplyForm()
-
-    return render(request, 'cart/cart.html', {'cart':cart,
-                                            'coupon_apply_form': coupon_apply_form})
+    return render(request, 'cart/cart.html')
 
 
 def add_to_cart(request, item_id):
