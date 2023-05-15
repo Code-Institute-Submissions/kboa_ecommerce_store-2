@@ -28,5 +28,6 @@ urlpatterns = [
     path('wishlist/', include('wishlist.urls')),
     path('checkout/', include('checkout.urls')),
     path('profile/', include('profiles.urls')),
+    path('coupon/', include('coupon.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 handler404 = 'kboa_foods.views.handler404'
