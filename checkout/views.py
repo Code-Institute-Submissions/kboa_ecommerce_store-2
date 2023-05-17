@@ -34,6 +34,8 @@ def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
+    current_cart = cart_contents(request)
+
     if request.method == 'POST':
         cart = request.session.get('cart', {})
 
@@ -53,6 +55,9 @@ def checkout(request):
             order = order_form.save(commit=False)
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
+            if current_cart['coupon']:
+                order.coupon = current_cart['coupon']
+                order.discount = current_cart['discount']
             order.original_cart = json.dumps(cart)
             order.save()
             for item_id, item_data in cart.items():
@@ -84,7 +89,6 @@ def checkout(request):
             messages.error(request, "There's nothing in your cart at the moment")
             return redirect(reverse('products'))
 
-        current_cart = cart_contents(request)
         total = current_cart['grand_total']
         stripe_total = round(total * 100)
         stripe.api_key = stripe_secret_key
@@ -160,6 +164,7 @@ def checkout_success(request, order_number):
 
     if 'cart' in request.session:
         del request.session['cart']
+        request.session['coupon_id'] = None
 
     template = 'checkout/checkout_success.html'
     context = {

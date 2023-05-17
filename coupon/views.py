@@ -1,9 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse
+from django.utils import timezone
 
 # Create your views here.
 from .models import Coupon
 from .forms import CouponApplyForm
-
 
 
 def coupon_apply(request):
@@ -19,4 +19,4 @@ def coupon_apply(request):
             request.session['coupon_id'] = coupon.id
         except Coupon.DoesNotExist:
             request.session['coupon_id'] = None
-    return redirect('cart:cart')
+    return redirect(reverse('view_cart'))

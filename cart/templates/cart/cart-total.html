@@ -1,3 +1,8 @@
 <h6><strong>Cart Total: {{ total|floatformat:2 }}</strong></h6>
+{% if discount_code %}
+    <h5>Coupon Code: {{ discount_code }}</h5>
+    <h5>Discount: {{ discount|floatformat:2 }}</h5>
+    <h5>Sub Total: {{ sub_total|floatformat:2 }}</h5>
+{% endif%}
 <h6>Delivery: ₦{{ delivery|floatformat:2 }}</h6>
 <h4 class="mt-4"><strong>Grand Total: ₦{{ grand_total|floatformat:2 }}</strong></h4>

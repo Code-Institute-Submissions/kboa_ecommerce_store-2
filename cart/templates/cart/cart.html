@@ -92,6 +92,20 @@
                                 </tr>
                             {% endfor %}
                             <tr>
+                                <td colspan="5" class="pt-5 text-left float-left">
+                                    <p>Apply Coupon:</p>
+                                    <form class="form update-form" method="POST" action="{% url 'coupon_apply' %}">                                           
+                                        {% csrf_token %}
+                                        <table>
+                                            {{ coupon_apply_form }}
+                                        </table>
+                                        <!-- <input type = "Submit" value = "Submit"/>  -->
+                                        <button type= "submit" class ="btn btn-success rounded-0" > Submit </button>
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                            <tr>
                                 <td colspan="5" class="pt-5 text-right">
                                     {% include "cart/cart-total.html" %}
                                 </td>
