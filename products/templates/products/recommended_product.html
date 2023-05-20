@@ -1,0 +1,11 @@
+<h2>Recommended Products</h2>
+{% for recommended_product in recommended_products %}
+<div class="product">
+    <a href="{{ recommended_product.get_absolute_url }}">
+        <img src="{{ recommended_product.image.url }}" alt="{{ recommended_product.name }}">
+    </a>
+    <h3>{{ recommended_product.name }}</h3>
+    <p>{{ recommended_product.description }}</p>
+    <p>Price: {{ recommended_product.price }}</p>
+</div>
+{% endfor %}
