@@ -24,6 +24,14 @@
             <div class="col">
                 {% if products %}
                     {% include "products/products_list.html" %}
+                    <div class="col-12">
+                        <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
+                            <span class="icon">
+                                <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="text-uppercase">Back to Products</span>
+                        </a>
+                    </div>
                 {% else %}
                     <p class="lead mb-5">You have no wishlist at this time.</p>
                     <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
