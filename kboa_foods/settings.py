@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['kboa-foods.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['kboa-foods.herokuapp.com', 'localhost', '8000-kiksgold-kboaecommerces-rp8u505k8h8.ws-eu97.gitpod.io']
 
 
 # Application definition
