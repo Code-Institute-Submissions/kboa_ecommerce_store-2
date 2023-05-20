@@ -30,3 +30,11 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class RecommendedProduct(models.Model):
+    product = models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE)
+    recommended_product = models.ForeignKey(Product, related_name='related_products', on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.recommended_product
