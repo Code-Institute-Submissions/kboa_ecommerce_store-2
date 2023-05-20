@@ -30,6 +30,7 @@
                             {% else %}
                                 <small class="text-muted">No Rating</small>
                             {% endif %}
+                            {% include 'products/recommended_products.html' with product_id=product.id %}
                             {% if request.user.is_superuser %}
                                 <small class="ml-3">
                                     <a href="{% url 'edit_product' product.id %}">Edit</a> | 
