@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 from django.http import HttpResponse, HttpResponseRedirect
-from .models import Product, Category
+from .models import Product, Category, RecommendedProduct
 from .forms import ProductForm
 
 # Create your views here.
@@ -138,3 +138,11 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+
+def recommended_products(request, product_id):
+    """ View for recommended product """
+    product = get_object_or_404(Product, pk=product_id)
+    category = product.category
+    recommended_products = Product.objects.filter(category=category).exclude(pk=product_id)[:4]
+    return render(request, 'recommended_products.html', {'recommended_products': recommended_products})
