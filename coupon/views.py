@@ -1,7 +1,5 @@
 from django.shortcuts import render, redirect, reverse
 from django.utils import timezone
-
-# Create your views here.
 from .models import Coupon
 from .forms import CouponApplyForm
 

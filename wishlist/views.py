@@ -47,7 +47,7 @@ def add_to_wishlist(request, product_id):
         wishlist = Wishlist.objects.get(user_profile=profile, product=product)
     except Wishlist.DoesNotExist:
         wishlist = None
-    
+
     if wishlist:
         wishlist.delete()
         messages.info(request, f'Remove {product.name} from wishlist')

@@ -29,7 +29,7 @@ def cart_contents(request):
         })
 
     delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
-  
+
     sub_total = total
 
     if coupon:
