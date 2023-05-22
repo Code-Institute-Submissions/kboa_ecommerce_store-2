@@ -1,6 +1,6 @@
 # KBOA Foods
-KBOA Foods is an ecommerce foodstore in Gbagada Lagos Nigeria. The web application was built for ease of shopping from anywhere and the items delivered to the client's location.
-The store is a full fledge ecommerce application that has been integrated with AWS and Stripe for payment details to conclude its transaction.
+KBOA Foods is a Business to Consumer (B2C) E-commerce Application Foodstore in Gbagada Lagos Nigeria. The web application was built for ease of shopping from anywhere and the items delivered to the client's location.
+The store is a full fledge ecommerce application that uses a single payment form. It has been integrated with AWS and Stripe for payment details to conclude its transaction.
 
 <p> Users with the weblink can shop from the website </p>
 <p> Only registered users have access to crud functionalities on the application </p>
@@ -10,22 +10,65 @@ https://kboa-foods.herokuapp.com/
 
 ![Image Here](./docs/features/amiresponsive.png)
 
-## Our Main goal:
+## Marketing Strategy:
+<p> KBOA Foodstore is a B2C retail store where customers shop quality frozen foods and ready to cook food.</p>
+<p> For two years we have encouraged healthy eating and we are prepared to take it beyond and we are glad to deliver fresh healthy foods to your homes within Lagos.</p>
+
+### Target Audience:
+Our application is targeted at online shoppers who would rather shop from the comfort of their home/environment. 
+
+### Location:
+We are available on all the listed social accounts.
 <ul>
-<li> to provide the ease of shopping from anywhere
-<li> support with ready to cook foods
-<li> to be accessible to our target audience in their various locations.
+<li> Instagram </li>
+<li> Facebook </li>
+<li> Google </li>
+<li> Youtube </li>
 </ul>
 
 ### Content Strategy
 <ul>
-<li> user-friendly
-<li> stand-out design with beautiful colors
-<li> easy to use navigations
+<li> Provide Food photos/videos on social media platforms </li>
+<li> Offer Food Recipes using our food products </li>
+<li> user-friendly website </li>
+<li> stand-out design with beautiful colors </li>
+<li> easy to use navigations </li>
 </ul>
 
-### Target Audience:
-Our application is targeted at online shoppers who would rather shop from the comfort of their home/environment. 
+### Market Offering:
+<ul>
+<li> We would offer coupon discounts to users </li>
+<li> We will recommend food products to the users </li>
+</ul>
+
+### Our Main goal:
+<ul>
+<li> Our goal is to encourage healthy eating within our environment and beyond </li>
+<li> to provide the ease of shopping from anywhere </li>
+<li> support with ready to cook foods </li>
+<li> to be accessible to our target audience in their various locations </li>
+</ul>
+
+### Advertising:
+<ul>
+<li> Free or low cost of Advert </li>
+<li> Facebook/Instagram Ads </li>
+</ul>
+
+### Database Structure:
+![Image Here](./docs/strategy/erdiagram.jpeg)
+
+## Wireframes:
+![Image Here](./docs/wireframes/web_home_page.png)
+![Image Here](./docs/wireframes/phone_home_page.png)
+![Image Here](./docs/wireframes/web_product_page.png)
+![Image Here](./docs/wireframes/phone_product_page.png)
+![Image Here](./docs/wireframes/web_product_detail_page.png)
+![Image Here](./docs/wireframes/phone_product_detail_page.png)
+![Image Here](./docs/wireframes/web_cart_page.png)
+![Image Here](./docs/wireframes/phone_cart_page.png)
+![Image Here](./docs/wireframes/web_checkout_page.png)
+![Image Here](./docs/wireframes/phone_checkout_page.png)
 
 ## User Story:
 <ul>
@@ -81,7 +124,7 @@ Our application is targeted at online shoppers who would rather shop from the co
     <li> It gives the users ability to find and contact the club if they need to.
     </ul>
 
-![Image Here](./docs/features/socialnetworks.png)
+![Image Here](./docs/userstory/wishlist.png)
 </ul>
 
 <li> Social media links
@@ -158,7 +201,7 @@ The major challenge that I experienced was timing.
 </ul>
 
 ## Deployment
-The site was deployed to GitHub Page. The following steps were taken for deployment:
+The site was deployed to Heroku. The following steps were taken for deployment:
 <ul>
 <li> Steps for Deployment
 </li>
@@ -173,6 +216,10 @@ The site was deployed to GitHub Page. The following steps were taken for deploym
     </li>
     <li>Click on deploy
     </li>
+    <li>Watch the build logs deploys
+    </li>
+    <li>Open the deployed application
+    </li>
     </ul>
 </ul>
 
@@ -182,6 +229,7 @@ The site was deployed to GitHub Page. The following steps were taken for deploym
 <li> Fontawesome </li>
 <li> W3schools for my code referencing https://www.w3schools.com/howto/ </li>
 <li> Adobe Stock for all my images https://stock.adobe.com/ng/Libraries </li>
+<li> Code Institute Student support </li>
 </ul>
 
 ## Acknowledgment 
