@@ -37,4 +37,4 @@ class RecommendedProduct(models.Model):
     recommended_product = models.ForeignKey(Product, related_name='related_products', on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.recommended_product
+        return self.recommended_product.name

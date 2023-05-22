@@ -140,9 +140,7 @@ def delete_product(request, product_id):
     return redirect(reverse('products'))
 
 
-def recommended_products(request, product_id):
+def recommended_product(request, product_id):
     """ View for recommended product """
-    product = get_object_or_404(Product, pk=product_id)
-    category = product.category
-    recommended_products = Product.objects.filter(category=category).exclude(pk=product_id)[:4]
-    return render(request, 'recommended_products.html', {'recommended_products': recommended_products})
+    product = get_object_or_404(RecommendedProduct, product=product_id)
+    return render(request, 'recommended_products.html', {'recommended_product': product})
