@@ -27,8 +27,8 @@
                         <!-- Trying to access recommmended products -->
                     {% if product.recommendedproduct_set %}
                         {% for recprod in product.recommendedproduct_set.all %}
-                        <p>
-                            Recommended Substitute: 
+                        <p class="mt-3"> <strong>
+                            Recommended Product: </strong>
                             <a href="{% url 'product_detail' product_id=recprod.recommended_product.id %}">{{recprod}}</a>
                         </p>
                         {% endfor %}
