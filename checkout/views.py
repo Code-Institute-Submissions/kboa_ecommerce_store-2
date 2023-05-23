@@ -90,7 +90,7 @@ def checkout(request):
             messages.error(request, "There's nothing in your cart at the moment")
             return redirect(reverse('products'))
 
-        total = current_cart['grand_total']
+        total = current_cart['grand_total'] - current_cart['discount']
         stripe_total = round(total * 100)
         stripe.api_key = stripe_secret_key
         intent = stripe.PaymentIntent.create(
