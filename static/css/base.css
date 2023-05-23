@@ -188,18 +188,6 @@ a.category-badge > span.badge:hover {
     overflow-y: auto;
 }
 
-/* .icon-hover:hover {
-    border-color: #3b71ca !important;
-    background-color: white !important;
-    font-family: 'Lato';
-    color: #555;
-  }
-  
-  .icon-hover:hover i {
-    color: #3b71ca !important;
-  } */
-
-
 /* Allauth form formatting */
 
 .allauth-form-inner-content p {

@@ -4,8 +4,10 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 from django.http import HttpResponse, HttpResponseRedirect
-from .models import Product, Category, RecommendedProduct
-from .forms import ProductForm
+from .models import Product, Category, RecommendedProduct, Review
+from .forms import ProductForm, ReviewForm
+from profiles.models import UserProfile
+from django.contrib.auth.models import User
 
 # Create your views here.
 
@@ -144,3 +146,23 @@ def recommended_product(request, product_id):
     """ View for recommended product """
     product = get_object_or_404(RecommendedProduct, product=product_id)
     return render(request, 'recommended_products.html', {'recommended_product': product})
+
+
+def add_review(request, product_id):
+	if request.user.is_authenticated:
+		product = Product.objects.get(pk=product_id)
+		if request.method == "POST":
+			form = ReviewForm(request.POST or None)
+			if form.is_valid():
+				review = form.save(commit=False)
+				review.comment = request.POST["comment"]
+				review.rating = request.POST["rating"]
+				review.user = request.user
+				review.product = product
+				review.save()
+				return redirect(reverse('product_detail', args=[product.id]))
+		else:
+			form = ReviewForm()
+		return render(request, 'product_detail.html', {'form': form})
+	else:
+		return redirect(reverse('products'))

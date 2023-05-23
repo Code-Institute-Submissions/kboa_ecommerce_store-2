@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.db import models
-
+from profiles.models import UserProfile
+from django.contrib.auth.models import User
 
 class Category(models.Model):
 
@@ -38,3 +39,14 @@ class RecommendedProduct(models.Model):
 
     def __str__(self):
         return self.recommended_product.name
+
+
+class Review(models.Model):
+    product = models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, null=False, on_delete=models.CASCADE, default=0,)
+    comment = models.TextField(max_length=1000)
+    rating = models.FloatField(default=0)
+    added_date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.user.username
