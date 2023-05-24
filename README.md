@@ -206,8 +206,8 @@ The major challenge that I experienced was timing.
     * Django AllAuth was utilised to provide enhanced user account management functionality.
 * Heroku
     * Was used as the cloud based platform to deploy the site on
-* Heroku PostgreSQL
-    * Heroku PostgreSQL was used as the database for this project during development and in production.
+* Elephant PostgreSQL
+    * Elephant PostgreSQL was used as the database for this project during development and in production.
 * JavaScript
     * Custom JavaScript was utilised to enable the colour scheme functionality, the mobile menu, the enabling and disabling of buttons on forms to prevent users inadvertantly causing errors when trying to submit multiple forms at the same time, and to display the current image in the form rather than a hyperlink to the image itself.
 * Bootstrap 4.6.2
@@ -236,7 +236,7 @@ The following steps were taken for deployment:
 * From Heroku Dashboard page select 'Create New App'
 * Give the project a name, select a suitable region, then select create app. The name for the app must be unique.
 * This will create the app within Heroku and bring you to the deploy tab. From the submenu at the top, navigate to the resources tab.
-* Go to ElephantSQL https://elephantsql.com/
+* Go to [ElephantSQL](https://elephantsql.com/)
 * Sign up / Log in to the dashboard
 * From the ElephantSQL Dashboard page select 'Create New Instance'
 * Give the the instance a name, select a suitable region, then select create instance
